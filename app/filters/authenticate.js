@@ -6,7 +6,7 @@ function authenticate(req, res, next) {
 
     // this is a hard-coded test implementation of the above.
     req.auth = {
-        id: process.env.TEST_AUTH_ID
+        // id: process.env.TEST_AUTH_ID
     }
     next()
 }

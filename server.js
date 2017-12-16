@@ -26,7 +26,7 @@ app.use(router)
 // start mongo connection pool, then start express app
 mongo.connect(process.env.MONGODB_URL)
     .then(() => app.listen(port))
-    .then(() => console.log(`Magic happens on port: ${port}`))
+    .then(() => console.log(`Tiffany is playing on : ${port}`))
     .catch((err) => {
         console.error(err)
         process.exit(1)
