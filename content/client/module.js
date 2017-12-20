@@ -38,7 +38,14 @@
     ];
 
     function RouteConfig($stateProvider, $urlRouterProvider, $locationProvider) {
-        $urlRouterProvider.otherwise('/hackers/list');
-        $locationProvider.html5Mode(true);
+        // $urlRouterProvider.otherwise(($injector, $location) => {
+        //     var $window = $injector.get('$window')
+        //     $window.location.reload()
+        // });
+        //$locationProvider.html5Mode(true);
+        $locationProvider.html5Mode({
+            enabled: true,
+            //requireBase: false
+          });
     }
 })();

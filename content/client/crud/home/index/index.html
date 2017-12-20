@@ -1,4 +1,8 @@
-<div ng-repeat="item in iCtrl.displayMessages">
+<button ui-sref="site.home.create">Create</button>
+<div ng-repeat="item in iCtrl.displayMessages | filter: {'dateDeactivated': null}">
     <span>Name: {{item.name}}</span>
     <span>Message: {{item.message}}</span>
+    <button ng-click="iCtrl.delete(item._id)">Delete</button>
+    <button ui-sref="site.home.edit({id: item._id})">Edit</button>
+    <button ng-click="iCtrl.detail(item._id)">Details</button>
 </div>

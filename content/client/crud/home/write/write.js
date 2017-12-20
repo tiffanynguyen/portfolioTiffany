@@ -3,9 +3,24 @@
     angular.module('client.crud')
         .controller('writeController', WriteController)
 
-    WriteController.$inject = []
-    function WriteController() {
+    WriteController.$inject = ['$state', 'contactMessageService']
+    function WriteController($state, contactMessageService) {
         var vm = this
-        
+        vm.formData = null
+        vm.submit = _submit
+        init()
+
+        function init() {
+            if ($state.params.id) {
+                contactMessageService.readById($state.params.id)
+                    .then(data => vm.formData = data.item)
+            }
+        }
+
+        function _submit(){
+            contactMessageService.create(vm.formData)
+        }
+
+
     }
 })();

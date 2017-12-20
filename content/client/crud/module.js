@@ -10,23 +10,37 @@
 
     function RouteConfig($stateProvider) {
         $stateProvider
-            .state('site.home', {
-                url: '/home',
-                abstract: true
-            })
-            .state('site.home.create', {
+            //.state('site.home', {
+                //url: '/home',
+                // views: {
+                //     'content': {
+                //         templateUrl: '/client/crud/home/home.html'
+                //     }
+                // }
+                //abstract: true
+            //})
+            .state('site.create', {
                 url: '/create',
                 views: {
-                    'content@site': {
+                    'content': {
                         templateUrl: '/client/crud/home/write/write.html',
                         controller: 'writeController as wCtrl'
                     }
                 }
             })
-            .state('site.home.index', {
+            .state('site.edit', {
+                url: '/:id',
+                views: {
+                    'content': {
+                        templateUrl: '/client/crud/home/write/write.html',
+                        controller: 'writeController as wCtrl'
+                    }
+                }
+            })
+            .state('site.index', {
                 url: '/index',
                 views: {
-                    'content@site': {
+                    'content': {
                         templateUrl: '/client/crud/home/index/index.html',
                         controller: 'indexController as iCtrl'
                     }

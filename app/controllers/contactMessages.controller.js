@@ -4,6 +4,7 @@ const apiPrefix = '/api/contactMessages';
 
 module.exports = {
     readAll: readAll,
+    readById: readById,
     create: create,
     update: update,
     delete: _delete
@@ -75,4 +76,4 @@ function _delete(req, res) {
             console.log(err)
             return res.status(500).send(new responses.ErrorResponse(err))
         })
-}
+    }

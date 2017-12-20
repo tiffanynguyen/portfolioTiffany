@@ -12,7 +12,7 @@
         $stateProvider
             .state('site', {
                 // abstract: true,
-                // url: '/',
+                //url: '/',
                 views: {
                     root: {
                         templateUrl: 'client/layout/layout.tpl.html'
@@ -20,4 +20,5 @@
                 }
             })
     }
-})()
+})();
+
