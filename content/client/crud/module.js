@@ -19,12 +19,11 @@
                 // }
                 //abstract: true
             //})
-            .state('site.create', {
-                url: '/create',
+            .state('site.login', {
+                url: '/login',
                 views: {
                     'content': {
-                        templateUrl: '/client/crud/home/write/write.html',
-                        controller: 'writeController as wCtrl'
+                        templateUrl: '/client/crud/home/login.html'
                     }
                 }
             })
