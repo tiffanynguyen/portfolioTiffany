@@ -54,7 +54,7 @@ function readById(req, res) {
 
 function update(req, res) {
     contactMessagesService
-        .updateOne(req.params.id, req.model)
+        .update(req.params.id, req.model)
         .then(contactMessage => {
             const responseModel = new responses.SuccessResponse()
             res.status(200).json(responseModel)

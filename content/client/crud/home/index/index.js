@@ -3,8 +3,8 @@
     angular.module('client.crud')
         .controller('indexController', IndexController)
 
-    IndexController.$inject = ['contactMessages', '$log', 'contactMessageService']
-    function IndexController(contactMessages, $log, contactMessageService) {
+    IndexController.$inject = ['contactMessages', '$log', 'contactMessageService', '$state']
+    function IndexController(contactMessages, $log, contactMessageService, $state) {
         var vm = this
         vm.displayMessages = null
         //vm.edit = _edit
@@ -21,7 +21,10 @@
         function _delete(id) {
             $log.log(id)
             contactMessageService.delete(id)
-                .then(data => $log.log(data))
+                .then(data => {
+                    $log.log(data)
+                    $state.reload()
+                })
                 .catch(err => $log.log(err))
         }
 

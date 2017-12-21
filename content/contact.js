@@ -15,7 +15,7 @@
 
         function _submit() {
             contactMessageService.create(vm.formData)
-                .then(data => console.log(data))
+                .then(data => vm.formData = null)
         }
 
     }

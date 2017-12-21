@@ -18,7 +18,11 @@
         }
 
         function _submit(){
-            contactMessageService.create(vm.formData)
+            contactMessageService.update(vm.formData)
+            .then(data => {
+                console.log(data)
+                $state.go('site.index', null, {reload:true})
+            })
         }
 
 
