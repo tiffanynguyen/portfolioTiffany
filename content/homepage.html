@@ -17,12 +17,15 @@
     <link rel="stylesheet" href="/theme/css/font-icons.css" type="text/css" />
     <link rel="stylesheet" href="/theme/css/animate.css" type="text/css" />
     <link rel="stylesheet" href="/theme/css/magnific-popup.css" type="text/css" />
-
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/theme/css/responsive.css" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- CSS -->
     <link rel="stylesheet" href="/libs/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" 
+      type="image/png" 
+      href="/theme/images/favicon1.png" />
 </head>
 
 <body>
@@ -98,7 +101,8 @@
                         <div class="container clearfix">
                             <div class="slider-caption slider-caption-center">
                                 <!-- <h3 data-caption-animate="fadeInUp"></h3> -->
-                                <p data-caption-animate="fadeInUp" data-caption-delay="200" style="font-size:40px">Web Developer: Tiffany Nguyen</p>
+                                <p data-caption-animate="fadeInUp" data-caption-delay="200" style="font-size:40px">Web Developer <span style="font-size:55px">|</span> Tiffany Nguyen</p>
+                                <p data-caption-animate="fadeInUp" data-caption-delay="200" style="font-size:25px">Dreaming in Binary</p>
                             </div>
                         </div>
                     </div>
@@ -143,21 +147,25 @@
 
     <!-- Content============================================= -->
     <section id="content">
-
+            
         <div class="content-wrap">
-
+            <hr/>
+                <span class="center before-heading" style="font-size:30px;">Contact Me!</span>
+                <hr/>
             <div class="container clearfix">
-                <div class="row clearfix">
 
-                    <div id="writeForm" ng-controller="writeController as wCtrl" ng-app="contact" class="col-lg-5">
+                    
+                <div class="row clearfix">
+                    
+                    <div id="writeForm" ng-controller="writeController as wCtrl" ng-app="contact" class="col-lg-7">
                         <form name="wCtrl.writeForm">
                             <label for="template-contactform-name">Name
-                                <small>*</small>
+                                <small></small>
                             </label>
                             <input type="text" id="template-contactform-name" name="template-contactform-name" ng-model="wCtrl.formData.name" value=""
                                 class="sm-form-control required" />
                             <label for="template-contactform-email">Email
-                                <small>*</small>
+                                <small></small>
                             </label>
                             <input type="email" id="template-contactform-email" name="template-contactform-email" ng-model="wCtrl.formData.email" value=""
                                 class="required email sm-form-control" />
@@ -165,7 +173,7 @@
                             <input type="text" id="template-contactform-phone" name="template-contactform-phone" ng-model="wCtrl.formData.phoneNumber"
                                 value="" class="sm-form-control" />
                             <label for="template-contactform-message">Message
-                                <small>*</small>
+                                <small></small>
                             </label>
                             <textarea class="required sm-form-control" id="template-contactform-message" name="template-contactform-message" ng-model="wCtrl.formData.message"
                                 rows="6" cols="30"></textarea>
@@ -175,17 +183,40 @@
                         </form>
                     </div>
 
-                    <div class="col-lg-7">
+                   
 
-                        <div style="position: relative; margin-bottom: -60px;" class="ohidden" data-height-lg="426" data-height-md="567" data-height-sm="470"
+                        <div style="position: relative; margin-bottom: -60px;" class="ohidden col-lg-5" data-height-lg="426" data-height-md="567" data-height-sm="470"
                             data-height-xs="287" data-height-xxs="183">
-                            <img src="/theme/images/services/code.jpg" style="position: absolute; top: 0; left: 0;" data-animate="fadeInUp" data-delay="100"
-                                alt="Chrome">
+                            <!-- <img src="/theme/images/team/me.jpg" style="position: absolute; top: 0; left: 0; height: 400px; width: 290px;" data-animate="fadeInUp" data-delay="100"
+                                alt="Chrome"> -->
+                              
+                                        <div class="team-image" style="position: absolute; top: 0; left: 0; height: 350px; width: 200px;" data-animate="fadeInUp" data-delay="100">
+                                            <img src="theme/images/team/me.jpg">
+                                            <div class="team-desc team-desc-bg">
+                                                    <div class="team-title"><h4>Tiffany Nguyen</h4><span>Software Developer</span></div>
+                                                    <a href="#" class="social-icon inline-block si-small si-light si-rounded si-instagram">
+                                                        <i class="icon-instagram"></i>
+                                                        <i class="icon-instagram"></i>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in/tiffany-nguyen-b20b15154/" class="social-icon inline-block si-small si-light si-rounded si-linkedin">
+                                                        <i class="icon-linkedin"></i>
+                                                        <i class="icon-linkedin"></i>
+                                                    </a>
+                                                    <a href="#" class="social-icon inline-block si-small si-light si-rounded si-github">
+                                                        <i class="fa fa-github"></i>
+                                                        <i class="fa fa-github"></i>
+                                                    </a>
+                                                </div>
+                                        </div>
+                                       
+                                  
+                            <!-- <img src="/theme/images/services/code.jpg" style="position: absolute; top: 0; left: 0;" data-animate="fadeInUp" data-delay="100"
+                                alt="Chrome"> -->
                             <!-- <img src="/theme/images/team/pic.jpg" style="position: absolute; top: 0; left: 0;" data-animate="fadeInUp" data-delay="400"
                                 alt="iPad"> -->
                         </div>
 
-                    </div>
+               
 
                 </div>
             </div>
@@ -276,8 +307,8 @@
 
                 <div class="row topmargin-lg bottommargin-sm">
 
-                    <div class="heading-block center">
-                        <h2>Skills</h2>
+                    <div class="before-heading center">
+                        <h2>What are my <span style="color:#6697B9;">skills?</span></h2>
                         <!-- description of skills============================= -->
                         <span class="divcenter"></span>
                     </div>
@@ -316,7 +347,7 @@
 
                     </div>
 
-                    <div class="col-md-4 hidden-sm bottommargin center">
+                    <div class="col-md-4 hidden-sm bottommargin center" style="margin-top:40px;">
                         <img src="/theme/images/services/macbook.jpg" alt="iphone 2">
                     </div>
 
@@ -444,7 +475,7 @@
                 </div>
 
                 <div class="col_one_third">
-                    <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="200">
+                    <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="100">
                         <div class="fbox-icon">
                             <a href="#">
                                 <i class="icon-line-eye"></i>
@@ -456,7 +487,7 @@
                 </div>
 
                 <div class="col_one_third col_last">
-                    <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="400">
+                    <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="300">
                         <div class="fbox-icon">
                             <a href="#">
                                 <i class="icon-line-star"></i>
@@ -470,7 +501,7 @@
                 <div class="clear"></div>
 
                 <div class="col_one_third">
-                    <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="600">
+                    <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="500">
                         <div class="fbox-icon">
                             <a href="#">
                                 <i class="icon-line-play"></i>
@@ -482,7 +513,7 @@
                 </div>
 
                 <div class="col_one_third">
-                    <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="800">
+                    <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="700">
                         <div class="fbox-icon">
                             <a href="#">
                                 <i class="icon-params"></i>
@@ -494,7 +525,7 @@
                 </div>
 
                 <div class="col_one_third col_last">
-                    <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="1000">
+                    <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="900">
                         <div class="fbox-icon">
                             <a href="#">
                                 <i class="icon-line-circle-check"></i>
@@ -508,7 +539,7 @@
                 <div class="clear"></div>
 
                 <div class="col_one_third bottommargin-sm">
-                    <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="600">
+                    <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="500">
                         <div class="fbox-icon">
                             <a href="#">
                                 <i class="icon-bulb"></i>
@@ -520,7 +551,7 @@
                 </div>
 
                 <div class="col_one_third bottommargin-sm">
-                    <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="800">
+                    <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="700">
                         <div class="fbox-icon">
                             <a href="#">
                                 <i class="icon-heart2"></i>
@@ -532,7 +563,7 @@
                 </div>
 
                 <div class="col_one_third bottommargin-sm col_last">
-                    <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="1000">
+                    <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="900">
                         <div class="fbox-icon">
                             <a href="#">
                                 <i class="icon-note"></i>
@@ -930,7 +961,7 @@
 
     <!-- Go To Top============================================= -->
     <div id="gotoTop" class="icon-angle-up"></div>
-    <!-- VENDOR JS -->
+
     <script src="/build/vendor.js"></script>
     <!-- BUILD JS -->
     <script src="/contact.js"></script>

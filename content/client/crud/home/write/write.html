@@ -103,7 +103,7 @@
                     </ul>
                 </li>
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="#" style="height:500px;">
                         <i class="fa fa-fw fa-link"></i>
                         <span class="nav-link-text">Link</span>
                     </a>
@@ -213,25 +213,29 @@
             <li class="breadcrumb-item active">My Dashboard</li>
         </ol>
     </div>
-    <form class="center">
+    <form class="col-md-8">
+        <hr/>
+        <h2 class="center">Edit Messages Form</h2>
         <div class="form-group">
             <label>Name</label>
-            <input ng-model="wCtrl.formData.name" name="name">
+            <input class="form-control" ng-model="wCtrl.formData.name" name="name">
         </div>
         <div class="form-group">
             <label>Email</label>
-            <input ng-model="wCtrl.formData.email" name="email" type="email">
+            <input class="form-control" ng-model="wCtrl.formData.email" name="email" type="email">
         </div>
         <div class="form-group">
             <label>Phone Number</label>
-            <input ng-model="wCtrl.formData.phoneNumber" name="phoneNumber">
+            <input class="form-control" ng-model="wCtrl.formData.phoneNumber" name="phoneNumber">
         </div>
         <div class="form-group">
             <label>Message</label>
-            <textarea ng-model="wCtrl.formData.message" name="message" rows="7"></textarea>
+            <textarea class="form-control" ng-model="wCtrl.formData.message" name="message" rows="7"></textarea>
         </div>
-        <button class="btn btn-primary" ng-click="wCtrl.submit()">Submit</button>
+        <button class="btn btn-primary btn-lg" ng-click="wCtrl.submit()">Submit</button>
+        <hr/>
     </form>
+
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
     <footer class="sticky-footer">
